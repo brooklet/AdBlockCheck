@@ -19,7 +19,7 @@ var adblock = (function () {
     var ad = createAd();
 
     setTimeout(function () {
-      var active = (ad.offsetLeft === 0 && ad.offsetTop === 0);
+      var active = (ad.offsetLeft === 0 && ad.offsetTop === 0 && ad.clientWidth === 0);
       callback(active);
     }, delay || 1000);
 
